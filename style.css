@@ -5,127 +5,204 @@
 }
 
 header {
-    margin: 2rem;
+  margin: 2rem;
 }
 main {
-    margin: 2rem;
+  margin: 2rem;
 }
 footer {
-    margin: 2rem;
+  margin: 2rem;
+  padding-top: 4rem;
 }
 
 h1 {
-    font-family: "Cactus Classical Serif", serif;
-    color: black;
-    font-weight: 800;
-   text-align: center;
+  font-family: "Cactus Classical Serif", serif;
+  color: black;
+  font-weight: 800;
+  text-align: center;
 }
 
 h2 {
-    font-family: "Cactus Classical Serif", serif;
-    color: black;
-    font-weight: 800;
-    padding-bottom: 5rem;
-    text-align: center;
+  font-family: "Cactus Classical Serif", serif;
+  color: black;
+  font-weight: 800;
+  padding-bottom: 5rem;
+  text-align: center;
 }
 h3 {
-    font-family: "Cactus Classical Serif", serif;
-    color: black;
-    font-weight: 800;
+  font-family: "Cactus Classical Serif", serif;
+  font-size: 16px;
+  color: black;
+  font-weight: bolder;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
 }
 a {
-    font-family: "Cactus Classical Serif", serif; 
-    color: rgb(6, 89, 6);
-    font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: green;
+  font-weight: 400;
+  text-decoration: none;
 }
 p {
-    font-family: "Cactus Classical Serif", serif;
-    color: black;
-    font-weight: 100;
+  font-family: "Cactus Classical Serif", serif;
+  color: rgb(74, 72, 72);
+  font-weight: lighter;
 }
 
 /*******Menu*******/
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /**Fundet hjælp på ChatGPT!**/
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    background-color: var(--tertiary);
-    border-bottom: 1px solid var(--primary);
-    /*box-shadow: 0 12px 28px 0 rgba(156, 5, 85, 0.241);*/
+  position: sticky;
+  top: 0;
+  z-index: 1000; /**Fundet hjælp på ChatGPT!**/
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid black;
+  background-color: white;
+  box-shadow: 0 12px 28px 0 rgb(238, 238, 238);
 }
 
 header nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 0.4rem;
-    gap: 30px;
-    overflow-x: auto;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.4rem;
+  gap: 30px;
+  overflow-x: auto;
 }
 
 .menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: rgb(6, 89, 6);
-    transition: color 0.3s;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: green;
+  transition: color 0.3s;
 }
-.menu a:hover {
-    color: black;
+/* .menu a:hover {
+  color: black;
+} */
+
+a:hover {
+  color: black;
+  font-size: 18px;
+  font-weight: bolder;
+  transition: all 500ms;
+  font-size-adjust: 20px;
 }
 
+/**INDEX SITE**/
+/** Moving text 1 MOBILE, Codepen**/
+.welcome-container {
+  position: relative;
+  overflow: hidden;
+  height: 120px;
+  width: 1400px;
+}
+
+.welcome {
+  position: absolute;
+  width: auto;
+  right: 0;
+  top: 0;
+  text-align: right;
+}
+
+.welcome-text {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  white-space: nowrap;
+  font-size: 80px;
+}
 
 /**Kategori site**/
 .categories {
-display: flex;
-gap: 2rem;
-justify-content: center;
-position: relative;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  position: relative;
 }
 
 .btn {
-width: 15rem;
-height: 10rem;
-background-color: rgb(6, 89, 6);
-color: white;
-border-top-left-radius: 10% ;
-border-top-right-radius: 10%;
-border-bottom-left-radius: 10%;
-border-bottom-right-radius: 10%;
-text-align: center;
+  width: 15rem;
+  height: 10rem;
+  background-color: white;
+  border: 3px solid;
+  padding: 1rem;
+  border-color: green;
+  text-align: center;
+  padding-top: 4rem;
 }
 .btn a:hover {
-    color: black;
+  color: black;
+  cursor: pointer;
 }
 
+/* div a {
+  padding-top: 4rem;
+} */
+
 /**Styling af produkt liste site**/
-.product_list_categories {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
-    text-align: center;
+.product {
+  display: grid;
+  grid-template-columns: (4, 1fr);
+  gap: 1rem;
+  text-align: center;
 }
+
 img {
-    width: 300px;
+  width: 300px;
 }
 
 /**Styling af produkt site**/
 
 .product_info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: (4, 1fr);
 }
 .productpic {
-    width: 500px;
+  width: 500px;
 }
 
-/**Produkt info, hvordan kobler jeg det på??**/
+/**Relevante classes**/
+.product_list_categories {
+  position: relative;
+}
+.on_sale {
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  line-height: 2;
+  padding: 4px;
+  position: absolute;
+  top: 0;
+  right: 393px;
+}
+
+.sold_out {
+  background-color: rgb(1, 1, 1);
+  color: white;
+  font-size: 14px;
+  line-height: 2;
+  padding: 4px;
+  position: absolute;
+  bottom: 130px;
+  right: 394px;
+}
+
+button {
+  width: 8rem;
+  height: 3rem;
+  margin-top: 3rem;
+  border-color: green;
+  background-color: white;
+  color: green;
+}
+
+/* *Produkt info, hvordan kobler jeg det på??*
 .caps {
     "id": 1535,
     "gender": "Unisex",
@@ -188,19 +265,10 @@ img {
     "discount": 51,
     "brandname": "Puma",
     "soldout": 0
-  }
-
-/**Relevante classes**/
-.nedsat {
-
-}
-
-.udsolgt {
-
-}
+  } */
 
 /**Categories**/
-[
+/* [
   {
     "category": "Accessories"
   },
@@ -213,188 +281,4 @@ img {
   {
     "category": "Sporting Goods"
   }
-]
-
-/**Product list**/
-[ {
-    "id": 1163,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Tshirts",
-    "season": "Summer",
-    "productionyear": 2011,
-    "usagetype": "Sports",
-    "productdisplayname": "Sahara Team India Fanwear Round Neck Jersey",
-    "price": 895,
-    "discount": null,
-    "brandname": "Nike",
-    "soldout": 0
-  },
-  {
-    "id": 1164,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Tshirts",
-    "season": "Winter",
-    "productionyear": 2015,
-    "usagetype": "Sports",
-    "productdisplayname": "Blue T20 Indian Cricket Jersey",
-    "price": 1595,
-    "discount": 28,
-    "brandname": "Nike",
-    "soldout": 1
-  },
-  {
-    "id": 1165,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Tshirts",
-    "season": "Summer",
-    "productionyear": 2013,
-    "usagetype": "Sports",
-    "productdisplayname": "Mean Team India Cricket Jersey",
-    "price": 2495,
-    "discount": 45,
-    "brandname": "Nike",
-    "soldout": 0
-  },
-  {
-    "id": 1525,
-    "gender": "Unisex",
-    "category": "Accessories",
-    "subcategory": "Bags",
-    "articletype": "Backpacks",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Casual",
-    "productdisplayname": "Deck Navy Blue Backpack",
-    "price": 1299,
-    "discount": 55,
-    "brandname": "Puma",
-    "soldout": 0
-  },
-  {
-    "id": 1526,
-    "gender": "Unisex",
-    "category": "Accessories",
-    "subcategory": "Bags",
-    "articletype": "Backpacks",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Sports",
-    "productdisplayname": "Big Cat Backpack Black",
-    "price": 1299,
-    "discount": null,
-    "brandname": "Puma",
-    "soldout": 0
-  },
-  {
-    "id": 1528,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Jackets",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Sports",
-    "productdisplayname": "Black Fleece Jacket",
-    "price": 3999,
-    "discount": 49,
-    "brandname": "Puma",
-    "soldout": 0
-  },
-  {
-    "id": 1529,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Tshirts",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Casual",
-    "productdisplayname": "Tee",
-    "price": 1899,
-    "discount": null,
-    "brandname": "Puma",
-    "soldout": 0
-  },
-  {
-    "id": 1530,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Jackets",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Sports",
-    "productdisplayname": "Track Jacket",
-    "price": 4299,
-    "discount": 57,
-    "brandname": "Puma",
-    "soldout": 1
-  },
-  {
-    "id": 1531,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Tshirts",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Casual",
-    "productdisplayname": "Grey Solid Round Neck T-Shirt",
-    "price": 799,
-    "discount": null,
-    "brandname": "Puma",
-    "soldout": 0
-  },
-  {
-    "id": 1532,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Tshirts",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Casual",
-    "productdisplayname": "Grey Leaping Cat T-shirt",
-    "price": 899,
-    "discount": null,
-    "brandname": "Puma",
-    "soldout": 0
-  }
-]
-
-/**Product**/
-#id1163 {
-    "id": 1163,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Tshirts",
-    "basecolour": "Blue",
-    "season": "Summer",
-    "productionyear": 2011,
-    "usagetype": "Sports",
-    "productdisplayname": "Sahara Team India Fanwear Round Neck Jersey",
-    "parsed": 1,
-    "soldout": 0,
-    "relid": 1163,
-    "price": 895,
-    "discount": null,
-    "variantname": "Roundneck Jersey",
-    "brandname": "Nike",
-    "brandbio": "Nike, creating experiences for today’s athlete",
-    "brandimage": "http://assets.myntassets.com/v1/assets/banners/2015/6/26/1435317851398-23197-3chxv6.jpg",
-    "agegroup": "Adults-Men",
-    "colour1": "NA",
-    "colour2": "NA",
-    "fashiontype": "Fashion",
-    "materialcaredesc": "\u003Cp\u003E100% polyester\u003Cbr\u003EMachine wash\u003C/p\u003E",
-    "sizefitdesc": null,
-    "description": "\u003Cp\u003EBlue round neck Sahara Team India jersey, has short sleeves, print on the chest and back chest\u003Cbr\u003E\u003Cbr\u003EWarranty for manufacturing defects: 6 months (not valid on products with more than 20% discount)\u003Cbr\u003E\u003C/p\u003E",
-    "styledesc": "\u003Cp\u003ECheer for the Indian cricket team on and off the fields in this blue polo neck jersey from Nike. "
-  }
+] */
