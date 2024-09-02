@@ -16,29 +16,35 @@
   </head>
   <body>
     <header>
-      <h1>Webshop</h1>
+      <h1>WEBSHOP</h1>
       <nav>
         <ul class="index_navigation">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="kategori.html">Categories</a></li>
-          <li><a href="produktliste.html">List of products</a></li>
-          <li><a href="produkt.html">Product Information</a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="kategori.html">CATEGORIES</a></li>
+          <li><a href="produktliste.html">LIST OF PRODUCTS</a></li>
+          <li><a href="produkt.html">PRODUCT INFORMATION</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>List of Products</h2>
-      <div class="product_list_categories">
-        <div class="caps">
-          <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/1535.webp"
-            alt="caps"
-          />
-          <a href="produkt.html">Unisex Logo Cap</a>
-          <p>Headwear, Caps, Puma</p>
-          <p>DKK 699,-</p>
-        </div>
-        <div class="tshirt">
+      <h2>LIST OF PRODUCTS</h2>
+      <template id="productTemplate">
+        <article class="product">
+          <div class="product_list_categories">
+          <img src="" al="img" />
+          <h3>Product name</h3>
+          <p class="subtle">Product info</p>
+          <p class="price"><span>Prev.</span> DKK 0,-</p>
+          <div class="discounted">
+            <span class="on_sale">On Sale</span>
+            <span class="sold_out">Out of Stock</span>
+            <p>Now DKK 0,-</p>
+            <p>0%</p>
+          </div>
+          <a class="read-more" href="produkt.html">Read more</a>
+        </article>
+      </template>
+     <!-- 
           <img
             src="https://kea-alt-del.dk/t7/images/webp/640/1538.webp"
             alt="tshirt"
@@ -65,8 +71,9 @@
           <p>Sports Equipment, Footballs, Puma</p>
           <p>DKK 999,-</p>
         </div>
-      </div>
+      </div>-->
     </main>
+    <script src="productlist.js"></script>
     <footer>
       <p>
         This webshop is built with data from
