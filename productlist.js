@@ -57,9 +57,12 @@ function showProduct(product) {
   copy.querySelector("img").src = imgURI;
   copy.querySelector("img").alt = `image of ${product.productdisplayname}`;
 
+<<<<<<< HEAD
   copy
     .querySelector(".read-more")
     .setAttribute("href", `product.html?id=${product.id}`);
+=======
+>>>>>>> product_dynamic
   //appende
   document.querySelector("main").appendChild(copy);
 }
