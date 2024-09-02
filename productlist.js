@@ -1,10 +1,3 @@
-//Forsøge på at følge video tutorial
-
-//Lagt ind for at få frem billeder (uden held!)
-const id = 1550; //OBS hvordan får jeg forskellige billeder?
-const uri = `https://kea-alt-del.dk/t7/api/products/${id}`;
-const imgURI = `https://kea-alt-del.dk/t7/images/webp/640/${id}.webp`;
-
 fetch("https://kea-alt-del.dk/t7/api/products")
   .then((res) => res.json())
   .then(showProducts);
@@ -20,6 +13,9 @@ function showProduct(product) {
   const template = document.querySelector("#productTemplate").content;
   //Lav kopi
   const copy = template.cloneNode(true);
+
+  const imgURI = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+
   //Ændre indhold
   copy.querySelector("h3").textContent = product.productdisplayname;
   //if (product.soldout) {
@@ -53,16 +49,15 @@ function showProduct(product) {
     copy.querySelector("article").classList.add("soldOut");
   }
 
-  //Forsøg på at få ind billede (uden held!!!)
+  //Forsøg på at få ind billede
   copy.querySelector("img").src = imgURI;
   copy.querySelector("img").alt = `image of ${product.productdisplayname}`;
 
-<<<<<<< HEAD
+  //Vist på viedo tutorial
   copy
     .querySelector(".read-more")
-    .setAttribute("href", `product.html?id=${product.id}`);
-=======
->>>>>>> product_dynamic
+    .setAttribute("href", `produkt.html?id=${product.id}`);
+
   //appende
   document.querySelector("main").appendChild(copy);
 }

@@ -159,7 +159,7 @@ img {
 
 /**Styling af produkt site**/
 
-.product_info {
+.product_info2 {
   display: grid;
   grid-template-columns: (4, 1fr);
 }

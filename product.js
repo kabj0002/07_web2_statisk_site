@@ -1,18 +1,25 @@
-//https://kea-alt-del.dk/t7/images/webp/1000/1543.webp
-
+//const id = 1551;
 const urlParams = new URLSearchParams(window.location.search);
-const query = urlParams.get("id");
+const id = urlParams.get("id");
+const url = `https://kea-alt-del.dk/t7/api/products/${id}`;
 
-fetch("https://kea-alt-del.dk/t7/api/products/" + id)
+//const query = urlParams.get("id");
+
+fetch(url) //Hvordan ændrer jeg produkt?
   .then((response) => response.json())
   .then((data) => showProduct(data));
 //Hvad vi sender
 
-//const imgURI = `https://kea-alt-del.dk/t7/images/webp/640/${productid}.webp`;
+function getProduct() {
+  fetch(url)
+    .then((response) => response.json())
+    .then(showProduct);
+}
 
 function showProduct(product) {
   //Hvad vi modtager
   console.log(product);
+
   document.querySelector(".product_info .productdisplayname").textContent =
     product.productdisplayname;
   document.querySelector(".product_info .price").textContent = product.price;
@@ -27,7 +34,8 @@ function showProduct(product) {
     product.id;
   document.querySelector(
     "img"
-  ).src = `https://kea-alt-del.dk/t7/images/webp/640/${productid}.webp`;
+  ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+  //document.querySelector("img").alt = product.productdisplayname;
 }
 
-//id: 1543, gender: "Men", category: "Footwear", subcategory: "Shoes", articletype: "Casual Shoes", basecolour: "Black", season: "Fall", productionyear: 2010, usagetype: "Casual", productdisplayname: "Basket-Biz Sneaker", … }
+getProduct();
