@@ -118,15 +118,17 @@ a:hover {
   font-size: 80px;
 }
 
-/**Kategori site**/
-.categories {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  position: relative;
+.btn_center {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
-
-.btn {
+.btn_index {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  /* display: flex;
+  position: relative;
+  justify-content: center; */
   width: 15rem;
   height: 10rem;
   background-color: white;
@@ -135,6 +137,28 @@ a:hover {
   border-color: green;
   text-align: center;
   padding-top: 4rem;
+}
+
+.btn_index a:hover {
+  color: black;
+  cursor: pointer;
+}
+
+/**Kategori site**/
+.section_category {
+  display: flex;
+  gap: 10rem;
+  justify-content: space-evenly;
+  margin: 5rem;
+}
+
+.btn {
+  background-color: white;
+  border: 3px solid;
+  padding: 1rem;
+  border-color: green;
+  text-align: center;
+  padding-top: 1rem;
 }
 .btn a:hover {
   color: black;
@@ -146,33 +170,77 @@ a:hover {
 } */
 
 /**Styling af produkt liste site**/
-.product {
+.grid_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+img {
+  width: 250px;
+}
+/* .product {
   display: grid;
   grid-template-columns: (4, 1fr);
   gap: 1rem;
   text-align: center;
-}
-
-img {
-  width: 300px;
-}
+} */
 
 /**Fjerner on sale og sold out**/
-.on_sale {
+/* .on_sale {
   display: none;
 }
 .sold_out {
   display: none;
-}
+} */
 
 /**Styling af produkt site**/
-
 .product_info2 {
-  display: grid;
-  grid-template-columns: (4, 1fr);
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 .productpic {
-  width: 500px;
+  width: 400px;
+}
+/**GO BACK BUTTON**/
+.btn_back {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  /* display: flex;
+    position: relative;
+    justify-content: center; */
+  width: 10rem;
+  height: 4rem;
+  background-color: white;
+  border: 3px solid;
+  padding: 1rem;
+  border-color: green;
+  text-align: center;
+  padding-top: 1rem;
+}
+.btn_back a:hover {
+  color: black;
+  cursor: pointer;
+}
+/**BUY NOW BUTTIN**/
+.btn_buy {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 10rem;
+  height: 4rem;
+  background-color: white;
+  border: 3px solid;
+  padding: 1rem;
+  border-color: green;
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.btn_buy a:hover {
+  color: black;
+  cursor: pointer;
 }
 
 /**Relevante classes**/
