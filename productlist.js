@@ -1,4 +1,7 @@
-fetch("https://kea-alt-del.dk/t7/api/products")
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
+fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
   .then((res) => res.json())
   .then(showProducts);
 
@@ -13,7 +16,6 @@ function showProduct(product) {
   const template = document.querySelector("#productTemplate").content;
   //Lav kopi
   const copy = template.cloneNode(true);
-
   const imgURI = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
 
   //Ændre indhold
@@ -31,6 +33,12 @@ function showProduct(product) {
   // Sæt prisen i <p class="price">
   copy.querySelector(".price").textContent = `Prev. DKK ${product.price},-`;
 
+  //Forsøger at lægge til udregning af discount! FAILED!
+  //if (product.discount){
+  //copy.querySelector("article").classList.add("onSale");
+  //copy.querySelector(".discounted p span") = Math.round(product.price -(product.price * product.discount) / 100);
+  //copy.querySelector(".discounted p+p span").textContent = product.discount;
+  //}
   // Hvis produktet er på udsalg, opdaterer vi rabatsektionen
   if (product.discount >= 1) {
     copy.querySelector(
