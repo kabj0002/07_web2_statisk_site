@@ -157,6 +157,14 @@ img {
   width: 300px;
 }
 
+/**Fjerner on sale og sold out**/
+.on_sale {
+  display: none;
+}
+.sold_out {
+  display: none;
+}
+
 /**Styling af produkt site**/
 
 .product_info2 {
@@ -171,7 +179,7 @@ img {
 .product_list_categories {
   position: relative;
 }
-.on_sale {
+.onSale {
   background-color: red;
   color: white;
   font-size: 14px;
@@ -182,7 +190,7 @@ img {
   right: 393px;
 }
 
-.sold_out {
+.soldOut {
   background-color: rgb(1, 1, 1);
   color: white;
   font-size: 14px;

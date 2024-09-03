@@ -32,28 +32,37 @@ function showProduct(product) {
   copy.querySelector(".price").textContent = `Prev. DKK ${product.price},-`;
 
   // Hvis produktet er på udsalg, opdaterer vi rabatsektionen
-  if (product.discount > 0) {
-    copy.querySelector(
-      ".discounted p"
-    ).textContent = `Now DKK ${product.discountedprice},-`;
+  if (product.discount >= 1) {
     copy.querySelector(
       ".discounted p + p"
     ).textContent = `-${product.discount}%`;
-  } else {
+    copy.querySelector(".discounted .on_sale").classList.add("onSale");
+    copy.querySelector(".onSale").style.display = "block";
+  }
+  //Set på video tutorial
+  // if (product.discount > 0) {
+  //   copy.querySelector(
+  //     ".discounted .on_sale"
+  //   ).textContent = `Now DKK ${product.discountedprice},-`; //OBS hvordan finde discounted price?
+  //   copy.querySelector(
+  //     ".discounted p + p"
+  //   ).textContent = `-${product.discount}%`;
+  else {
     // Hvis der ingen rabat er, kan vi skjule eller fjerne rabatsektionen
-    copy.querySelector(".discounted").style.display = "none";
+    copy.querySelector(".discounted .on_sale").style.display = "none";
   }
-
   // Hvis produktet er udsolgt, tilføj soldOut-klassen til artikel
-  if (product.soldout) {
-    copy.querySelector("article").classList.add("soldOut");
+  if (product.soldout > 0) {
+    copy.querySelector(".discounted .sold_out").classList.add("soldOut");
+    copy.querySelector(".soldOut").style.display = "block";
+  } else {
+    copy.querySelector(".discounted .sold_out").style.display = "none";
   }
-
   //Forsøg på at få ind billede
   copy.querySelector("img").src = imgURI;
   copy.querySelector("img").alt = `image of ${product.productdisplayname}`;
 
-  //Vist på viedo tutorial
+  //Vist på video tutorial
   copy
     .querySelector(".read-more")
     .setAttribute("href", `produkt.html?id=${product.id}`);
