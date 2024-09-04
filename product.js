@@ -18,7 +18,6 @@ function getProduct() {
 
 function showProduct(product) {
   //Hvad vi modtager
-  console.log(product);
 
   document.querySelector(".product_info .productdisplayname").textContent =
     product.productdisplayname;

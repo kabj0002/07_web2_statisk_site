@@ -128,7 +128,9 @@ a:hover {
   justify-content: center; */
   width: 15rem;
   height: 10rem;
-  background-color: white;
+  background-color: #ff5622b2;
+  color: white;
+  font-weight: bold;
   border: 3px solid;
   padding: 1rem;
   border-color: green;
@@ -212,18 +214,14 @@ a:hover {
   padding: 10px;
   border-radius: 4px;
   font-size: 16px;
+  color: white;
+  text-align: center;
 }
-
 .on_sale {
   background-color: #ff5722;
-  color: white;
-  text-align: center;
 }
-
 .sold_out {
   background-color: black;
-  color: white;
-  text-align: center;
 }
 .read-more {
   margin-top: 1.5rem;
@@ -233,26 +231,6 @@ a:hover {
 .discounted {
   margin-top: 10px;
 }
-
-/* .product_flex {
-  display: flex;
-  flex-direction: row;
-}
-
-.product {
-  /* display: grid;
-  grid-template-columns: repeat(4, 1fr); */
-/* gap: 1rem;
-  text-align: center;
-} */
-
-/**Fjerner on sale og sold out**/
-/* .on_sale {
-  display: none;
-}
-.sold_out {
-  display: none;
-} */
 
 /**Styling af produkt site**/
 .product_info2 {
@@ -265,28 +243,55 @@ a:hover {
 .productpic {
   width: 400px;
 }
-.grid_1-1 {
+.product_info {
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+/* .grid_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-}
+} */
 
 /**BUY NOW BUTTON**/
 .btn_buy {
   display: flex;
   justify-content: space-evenly;
-
   width: 10rem;
   height: 4rem;
-  background-color: white;
+  background-color: #ff5622b2;
   border: 3px solid;
   padding: 1rem;
   border-color: green;
   text-align: center;
   padding-top: 1rem;
   margin-top: 1rem;
+  color: white;
 }
 .btn_buy a:hover {
+  color: black;
+  cursor: pointer;
+}
+/**GO BACK BUTTON**/
+.btn_back {
+  display: flex;
+  justify-content: space-evenly;
+  width: 10rem;
+  height: 4rem;
+  background-color: #f8f8f8;
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.btn_back a:hover {
   color: black;
   cursor: pointer;
 }
@@ -304,7 +309,6 @@ a:hover {
   top: 0;
   right: 393px; */
 }
-
 .soldOut {
   color: white;
   /* font-size: 14px;
@@ -313,13 +317,4 @@ a:hover {
   /* position: absolute;
   bottom: 130px;
   right: 394px; */
-}
-
-button {
-  width: 8rem;
-  height: 3rem;
-  margin-top: 3rem;
-  border-color: green;
-  background-color: white;
-  color: green;
 }

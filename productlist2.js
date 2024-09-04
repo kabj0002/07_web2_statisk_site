@@ -1,5 +1,3 @@
-//Hentet på chatgpt
-
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 

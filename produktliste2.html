@@ -11,14 +11,15 @@
       href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&display=swap"
       rel="stylesheet"
     />
-    <title>Kategori</title>
+    <title>Produktliste 2</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <a href="index.html"><h1>WEBSHOP</h1></a>
+      <h1>WEBSHOP</h1>
       <nav>
         <ul class="index_navigation">
+          <li><a href="index.html">HOME</a></li>
           <li><a href="kategori.html">CATEGORIES</a></li>
           <li><a href="produktliste.html">LIST OF PRODUCTS</a></li>
           <li><a href="produkt.html">PRODUCT INFORMATION</a></li>
@@ -26,15 +27,22 @@
       </nav>
     </header>
     <main>
-      <h2>SHOP BY CATEGORY</h2>
-      <section class="section_category">
-        <template>
-          <a class="btn" href="produktliste.html">ACCESSORIES</a>
-        </template>
-        <ul id="categoryList"></ul>
-      </section>
+      <h2>LIST OF PRODUCTS</h2>
+      <template>
+        <article class="product">
+          <img src="" alt="img" />
+          <h3>Product name</h3>
+          <p class="subtle">Product info</p>
+          <p class="price">DKK <span>1595</span> ,-</p>
+          <div class="discounted">
+            <p>Now DKK<span></span>,-</p>
+            <p><span></span>%</p>
+          </div>
+          <a class="read-more" href="produkt.html">Read more</a>
+        </article>
+      </template>
     </main>
-    <script src="category.js"></script>
+    <script src="productlist2.js"></script>
     <footer>
       <p>
         This webshop is built with data from
