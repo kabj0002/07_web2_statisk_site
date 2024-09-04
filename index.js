@@ -17,7 +17,7 @@
   }
 
   function moveWelcomeElement() {
-    posAnimationElement += 2;
+    posAnimationElement += 5;
     animationElement.style.right = posAnimationElement + "px";
     if (posAnimationElement > parentAnimationElementWidth)
       posAnimationElement = startPosAnimationElement;

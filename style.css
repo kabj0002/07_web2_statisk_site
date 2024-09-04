@@ -81,9 +81,6 @@ header nav ul {
   color: green;
   transition: color 0.3s;
 }
-/* .menu a:hover {
-  color: black;
-} */
 
 a:hover {
   color: black;
@@ -98,8 +95,8 @@ a:hover {
 .welcome-container {
   position: relative;
   overflow: hidden;
-  height: 120px;
-  width: 1400px;
+  height: 160px;
+  width: 1600px;
 }
 
 .welcome {
@@ -115,7 +112,7 @@ a:hover {
   position: relative;
   width: auto;
   white-space: nowrap;
-  font-size: 80px;
+  font-size: 120px;
 }
 
 .btn_center {
@@ -159,28 +156,93 @@ a:hover {
   border-color: green;
   text-align: center;
   padding-top: 1rem;
+  text-transform: uppercase;
 }
 .btn a:hover {
   color: black;
   cursor: pointer;
 }
 
-/* div a {
-  padding-top: 4rem;
-} */
-
 /**Styling af produkt liste site**/
-.grid_list {
+
+/**Hentet på chat gpt**/
+/* Layout til produktgrid */
+.product_list_structure {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Afstand mellem produktkortene */
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
-img {
+/* Styling til selve produktartiklen */
+.product {
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+/* Justering af billedstørrelse */
+.product_list_categories img {
   width: 250px;
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  margin: 0 auto;
 }
-/* .product {
-  display: grid;
-  grid-template-columns: (4, 1fr);
-  gap: 1rem;
+/* Ens højde på produkterne */
+.product_list_categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.on_sale,
+.sold_out {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.on_sale {
+  background-color: #ff5722;
+  color: white;
+  text-align: center;
+}
+
+.sold_out {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.read-more {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+/* Skjul rabatsektoren, når den ikke er relevant */
+.discounted {
+  margin-top: 10px;
+}
+
+/* .product_flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.product {
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+/* gap: 1rem;
   text-align: center;
 } */
 
@@ -203,27 +265,13 @@ img {
 .productpic {
   width: 400px;
 }
-/**GO BACK BUTTON**/
-.btn_back {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  /* display: flex;
-    position: relative;
-    justify-content: center; */
-  width: 10rem;
-  height: 4rem;
-  background-color: white;
-  border: 3px solid;
-  padding: 1rem;
-  border-color: green;
-  text-align: center;
-  padding-top: 1rem;
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
-.btn_back a:hover {
-  color: black;
-  cursor: pointer;
-}
-/**BUY NOW BUTTIN**/
+
+/**BUY NOW BUTTON**/
 .btn_buy {
   display: flex;
   justify-content: space-evenly;
@@ -248,25 +296,23 @@ img {
   position: relative;
 }
 .onSale {
-  background-color: red;
   color: white;
-  font-size: 14px;
+  /* font-size: 14px;
   line-height: 2;
-  padding: 4px;
-  position: absolute;
+  padding: 4px; */
+  /* position: absolute;
   top: 0;
-  right: 393px;
+  right: 393px; */
 }
 
 .soldOut {
-  background-color: rgb(1, 1, 1);
   color: white;
-  font-size: 14px;
+  /* font-size: 14px;
   line-height: 2;
-  padding: 4px;
-  position: absolute;
+  padding: 4px; */
+  /* position: absolute;
   bottom: 130px;
-  right: 394px;
+  right: 394px; */
 }
 
 button {
@@ -277,84 +323,3 @@ button {
   background-color: white;
   color: green;
 }
-
-/* *Produkt info, hvordan kobler jeg det på??*
-.caps {
-    "id": 1535,
-    "gender": "Unisex",
-    "category": "Accessories",
-    "subcategory": "Headwear",
-    "articletype": "Caps",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Sports",
-    "productdisplayname": "Unisex Logo Cap",
-    "price": 699,
-    "discount": null,
-    "brandname": "Puma",
-    "soldout": 0
-}
-
-.tshirt {
-    "id": 1538,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Tshirts",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Casual",
-    "productdisplayname": "Track Black T-shirt",
-    "price": 1799,
-    "discount": 47,
-    "brandname": "Puma",
-    "soldout": 0
-  }
-
-.shoes {
-        "id": 1543,
-        "gender": "Men",
-        "category": "Footwear",
-        "subcategory": "Shoes",
-        "articletype": "Casual Shoes",
-        "season": "Fall",
-        "productionyear": 2010,
-        "usagetype": "Casual",
-        "productdisplayname": "Basket-Biz Sneaker",
-        "price": 3499,
-        "discount": null,
-        "brandname": "Puma",
-        "soldout": 0
-}
-
-.football {
-    "id": 1550,
-    "gender": "Unisex",
-    "category": "Sporting Goods",
-    "subcategory": "Sports Equipment",
-    "articletype": "Footballs",
-    "season": "Fall",
-    "productionyear": 2010,
-    "usagetype": "Sports",
-    "productdisplayname": "Cat Trainer-BL Football",
-    "price": 999,
-    "discount": 51,
-    "brandname": "Puma",
-    "soldout": 0
-  } */
-
-/**Categories**/
-/* [
-  {
-    "category": "Accessories"
-  },
-  {
-    "category": "Apparel"
-  },
-  {
-    "category": "Footwear"
-  },
-  {
-    "category": "Sporting Goods"
-  }
-] */

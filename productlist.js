@@ -1,3 +1,4 @@
+//OBS BRUGER IKKE!!
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 
@@ -11,7 +12,6 @@ function showProducts(products) {
 }
 
 function showProduct(product) {
-  console.log(product);
   //fang template
   const template = document.querySelector("#productTemplate").content;
   //Lav kopi

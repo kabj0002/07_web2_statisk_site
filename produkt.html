@@ -16,10 +16,9 @@
   </head>
   <body>
     <header>
-      <h1>WEBSHOP</h1>
+      <a href="index.html"><h1>WEBSHOP</h1></a>
       <nav>
         <ul class="index_navigation">
-          <li><a href="index.html">HOME</a></li>
           <li><a href="kategori.html">CATEGORIES</a></li>
           <li><a href="produktliste.html">LIST OF PRODUCTS</a></li>
           <li><a href="produkt.html">PRODUCT INFORMATION</a></li>
@@ -37,26 +36,33 @@
           />
         </div>
         <section class="product_info">
-          <h3>MODEL NAME</h3>
+          <h3>Model Name</h3>
           <p class="productdisplayname">Basket-Biz Sneaker</p>
-          <h3>PRICE</h3>
+          <h3>Price</h3>
           <p class="price">DKK 3499,-</p>
-          <h3>BRANDNAME</h3>
+          <h3>Brandname</h3>
           <p class="brand">Puma</p>
-          <h3>CATEGORY</h3>
+          <h3>Category</h3>
           <p class="category">Footwear</p>
-          <h3>ARTICLE TYPE</h3>
+          <h3>Article Type</h3>
           <p class="article_type">Casual Shoes</p>
-          <h3>COLOR</h3>
+          <h3>Color</h3>
           <p class="color">Blue</p>
-          <h3>INVENTORY NUMBER</h3>
+          <h3>Inventory Number</h3>
           <p class="inventory_number">1543</p>
-          <a class="btn_buy" href="">BUY NOW</a>
+          <div class="discounted">
+            <div class="grid_1-1">
+              <span class="on_sale">ON SALE</span>
+              <span class="sold_out">OUT OF STOCK</span>
+            </div>
+            <p>Now DKK 0,-</p>
+            <p>0%</p>
+          </div>
+          <div class="grid_1-1">
+            <a class="btn_buy" href="">BUY NOW</a>
+            <a class="btn_buy" href="produktliste.html">GO BACK</a>
+          </div>
         </section>
-      </div>
-      <div class="btn_center">
-        <a class="btn_back" href="produktliste.html">GO BACK</a>
-        <!-- OBS denne button virker ikke! -->
       </div>
     </main>
     <script src="product.js"></script>
