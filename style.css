@@ -7,9 +7,6 @@
 header {
   margin: 2rem;
 }
-main {
-  margin: 2rem;
-}
 footer {
   margin: 2rem;
   padding-top: 4rem;
@@ -127,7 +124,7 @@ a:hover {
   position: relative;
   justify-content: center; */
   width: 15rem;
-  height: 10rem;
+  height: 8rem;
   background-color: #ff5622b2;
   color: white;
   font-weight: bold;
@@ -135,7 +132,7 @@ a:hover {
   padding: 1rem;
   border-color: green;
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 
 .btn_index a:hover {
